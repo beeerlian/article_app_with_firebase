@@ -7,6 +7,7 @@ import 'package:slicing_ios_article_app/services/authservices.dart';
 import 'package:slicing_ios_article_app/ui/home.dart';
 import 'package:slicing_ios_article_app/ui/login_page.dart';
 import 'package:slicing_ios_article_app/ui/sign_up.dart';
+import 'package:slicing_ios_article_app/ui/upload_article.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: _InitialPage(),
+      home: UploadPage(),
     );
   }
 
