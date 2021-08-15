@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "775777159631",
+    "project_id": "beeerlian-34559",
+    "storage_bucket": "beeerlian-34559.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775777159631:android:8a4f64dc6396bad1d26aba",
+        "android_client_info": {
+          "package_name": "com.example.slicing_ios_article_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775777159631-a49rp1p3upcp7tn057nho97hsh73nnj5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwwGKKjocEtp9vfr2c9dyRdwE9-Pq8UoY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775777159631-a49rp1p3upcp7tn057nho97hsh73nnj5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
