@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:slicing_ios_article_app/services/database_services.dart';
 
 class FirebaseApi {
   static UploadTask? uploadFile(
@@ -29,4 +30,5 @@ class FirebaseApi {
       return null;
     }
   }
+
 }
