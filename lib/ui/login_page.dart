@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:slicing_ios_article_app/bloc/auth_bloc.dart';
 import 'package:slicing_ios_article_app/services/authservices.dart';
 import 'package:slicing_ios_article_app/ui/sign_up.dart';
 import 'package:slicing_ios_article_app/ui/widget/widgets.dart';
@@ -24,28 +26,48 @@ class Login extends StatelessWidget {
               child: Column(
                 children: [
                   TextFormField(
-                    validator: (val) {
-                      return RegExp(
-                                  r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                              .hasMatch(val as dynamic)
-                          ? null
-                          : "Please Enter Correct Email";
+                    onChanged: (value) {
+                      EmailBloc().checking(value);
                     },
                     controller: email,
                     style: simpleTextStyle(),
                     decoration: textFieldInputDecoration("Email"),
                   ),
+                  // BlocConsumer<EmailBloc, bool>(
+                  //   listener: (context, state) {},
+                  //   builder: (context, state) => state
+                  //       ? Align(
+                  //           alignment: Alignment.centerRight,
+                  //           child: Text(
+                  //             "Please Enter Correct Email",
+                  //             style: errorLogTextStyle(),
+                  //           ),
+                  //         )
+                  //       : Container(),
+                  // ),
+                
                   TextFormField(
                     obscureText: true,
-                    validator: (val) {
-                      return val!.length > 6
-                          ? null
-                          : "Enter Password 6+ characters";
+                    onChanged: (value) {
+                      PassBloc().checking(value);
                     },
                     style: simpleTextStyle(),
                     controller: password,
                     decoration: textFieldInputDecoration("Password"),
                   ),
+                  // BlocConsumer<PassBloc, bool>(
+                  //   listener: (context, state) {},
+                  //   builder: (context, state) => state
+                  //       ? Align(
+                  //           alignment: Alignment.centerRight,
+                  //           child: Text(
+                  //             "Password weak",
+                  //             style: errorLogTextStyle(),
+                  //           ),
+                  //         )
+                  //       : Container(),
+                  // ),
+                
                 ],
               ),
             ),
@@ -73,6 +95,5 @@ class Login extends StatelessWidget {
         ),
       ),
     );
-  
   }
 }
